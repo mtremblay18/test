@@ -40,6 +40,7 @@ function Profile() {
               src={userDetails.photo}
               width={"40%"}
               style={{ borderRadius: "50%" }}
+              alt="test"
             />
           </div>
           <h3>Welcome {userDetails.firstName} 🙏🙏</h3>
