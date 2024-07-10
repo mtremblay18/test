@@ -1,8 +1,9 @@
 import { signInWithEmailAndPassword } from "firebase/auth";
 import React, { useState } from "react";
-import { auth } from "./firebase";
+import { auth } from "./firebase.js";
 import { toast } from "react-toastify";
-import SignInwithGoogle from "./signInWIthGoogle";
+import SignInwithGoogle from "./signInWIthGoogle.js";
+import {Link} from "react-router-dom";
 
 function Login() {
   const [email, setEmail] = useState("");
@@ -57,10 +58,10 @@ function Login() {
           Submit
         </button>
       </div>
-      <p className="forgot-password text-right">
-        New user <a href="/register">Register Here</a>
-      </p>
-      <SignInwithGoogle/>
+        <p className="forgot-password text-right">
+            New user <Link to="/register">Register Here</Link>
+        </p>
+        <SignInwithGoogle/>
     </form>
   );
 }

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { auth, db } from "./firebase";
+import { auth, db } from "./firebase.js";
 import { doc, getDoc } from "firebase/firestore";
 
 function Profile() {
@@ -40,7 +40,7 @@ function Profile() {
               src={userDetails.photo}
               width={"40%"}
               style={{ borderRadius: "50%" }}
-              alt="test"
+              alt=""
             />
           </div>
           <h3>Welcome {userDetails.firstName} 🙏🙏</h3>
